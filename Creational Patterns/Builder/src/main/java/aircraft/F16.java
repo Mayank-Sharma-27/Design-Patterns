@@ -3,12 +3,22 @@ package aircraft;
 import builders.AircraftBuilder;
 import lombok.Data;
 
-@Data
-public class F16 extends IAircraft {
+
+public class F16 extends IAircraft implements IAircraftPrototype {
+
+    @Override
+    public void fly() {
+        System.out.println("F-16 flying...");
+    }
+
+    @Override
+    public IAircraftPrototype clone() {
+        return new F16();
+    }
 
 
-    public static F16Builder builder() {
-        return new F16Builder();
+    public void setEngine(String engine) {
+        super.setEngine(engine);
     }
 
     public static class F16Builder extends AircraftBuilder {
@@ -18,26 +28,26 @@ public class F16 extends IAircraft {
         private String cockpit;
 
         @Override
-        public AircraftBuilder buildCockpit(String cockpit) {
+        public F16Builder buildCockpit(String cockpit) {
             this.cockpit = "f16 Cockpit";
             return this;
         }
 
         @Override
-        public AircraftBuilder buildEngine() {
+        public F16Builder buildEngine() {
             this.engine = "f16 Engine";
             return this;
         }
 
 
         @Override
-        public AircraftBuilder buildWings() {
+        public F16Builder buildWings() {
             this.wings = "F16 wings";
             return this;
         }
 
 
-        public IAircraft build() {
+        public F16 build() {
             if (this.cockpit == null || this.engine == null || this.wings == null) {
                 throw new RuntimeException("All required properties are not present.");
             }

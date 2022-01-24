@@ -8,14 +8,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Singleton" />
+        <module name="Adapter Pattern" />
+        <module name="Factory" />
+        <module name="Prototype" />
         <module name="Builder" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Builder" target="1.5" />
-      <module name="Creational Patterns" target="1.5" />
-      <module name="Design-Patterns" target="1.5" />
-      <module name="Singleton" target="1.5" />
+      <module name="Adapter Pattern" target="1.8" />
+      <module name="Builder" target="1.8" />
+      <module name="Creational Patterns" target="1.8" />
+      <module name="Design-Patterns" target="1.8" />
+      <module name="Factory" target="1.8" />
+      <module name="Prototype" target="1.8" />
+      <module name="Singleton" target="1.8" />
+      <module name="Structural Patterns" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

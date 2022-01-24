@@ -18,32 +18,32 @@ public class Boeing747 extends IAircraft {
         private String bathrooms;
 
         @Override
-        public AircraftBuilder buildCockpit(String cockpit) {
+        public Boeing747Builder buildCockpit(String cockpit) {
             this.cockpit = "Boeing747 Cockpit";
             return this;
         }
 
         @Override
-        public AircraftBuilder buildEngine() {
+        public Boeing747Builder buildEngine() {
             this.engine = "Boeing747 Engine";
             return this;
         }
 
 
         @Override
-        public AircraftBuilder buildWings() {
+        public Boeing747Builder buildWings() {
             this.wings = "Boeing747 wings";
             return this;
         }
 
         @Override
-        public AircraftBuilder buildBathrooms() {
+        public Boeing747Builder buildBathrooms() {
             this.bathrooms = "Boeing747 bathrooms";
             return this;
         }
 
 
-        public IAircraft build() {
+        public Boeing747 build() {
             if (this.cockpit == null || this.engine == null || this.wings == null) {
                 throw new RuntimeException("All required properties are not present.");
             }

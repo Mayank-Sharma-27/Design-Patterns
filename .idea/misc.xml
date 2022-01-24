@@ -5,7 +5,14 @@
       <list>
         <option value="$PROJECT_DIR$/../Creational Patterns/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/Creational Patterns/Factory/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Factory/pom.xml" />
+        <option value="$PROJECT_DIR$/Prototype/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
